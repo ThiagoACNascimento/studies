@@ -1,7 +1,4 @@
-interface Vehicle {
-  name: string;
-  year: Date;
-  broken: boolean;
+interface Reportable {
   summury(): string;
 }
 
@@ -14,8 +11,8 @@ const oldCivic = {
   },
 };
 
-const printVehicle = (vehicle: Vehicle) => {
-  console.log(vehicle.summury());
+const printSummury = (item: Reportable) => {
+  console.log(item.summury());
 };
 
-printVehicle(oldCivic);
+printSummury(oldCivic);
