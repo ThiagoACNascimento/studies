@@ -8,6 +8,12 @@ class Vihicle {
   }
 }
 
+class Car extends Vihicle {}
+
 const vihicle = new Vihicle();
 vihicle.drive();
 vihicle.honk();
+
+const car = new Car();
+car.drive();
+car.honk();
