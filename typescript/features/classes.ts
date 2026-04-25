@@ -1,19 +1,30 @@
 class Vihicle {
-  drive(): void {
+  private drive(): void {
     console.log('vruuuuum');
   }
 
-  honk(): void {
+  protected honk(): void {
     console.log('beee');
   }
 }
 
-class Car extends Vihicle {}
+// `drive` can be only used inside the Vehicle Class
+class Car extends Vihicle {
+  private drive(): void {
+    console.log('vrum vrum....');
+  }
+
+  startDrive(): void {
+    this.drive();
+    this.honk();
+  }
+}
 
 const vihicle = new Vihicle();
+// cannot use `drive` outside the Vihicle Class
 vihicle.drive();
+// cannot use `honk` outside the Vihicle Class
 vihicle.honk();
 
 const car = new Car();
-car.drive();
-car.honk();
+car.startDrive();
