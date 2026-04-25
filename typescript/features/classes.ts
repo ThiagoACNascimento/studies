@@ -1,7 +1,9 @@
 class Vihicle {
-  private drive(): void {
-    console.log('vruuuuum');
-  }
+  constructor(public color: string = 'red') {}
+
+  // private drive(): void {
+  //   console.log('vruuuuum');
+  // }
 
   protected honk(): void {
     console.log('beee');
@@ -20,11 +22,12 @@ class Car extends Vihicle {
   }
 }
 
-const vihicle = new Vihicle();
+const vihicle = new Vihicle('blue');
+console.log(vihicle.color);
 // cannot use `drive` outside the Vihicle Class
-vihicle.drive();
+// vihicle.drive();
 // cannot use `honk` outside the Vihicle Class
-vihicle.honk();
+// vihicle.honk();
 
-const car = new Car();
+const car = new Car('black');
 car.startDrive();
