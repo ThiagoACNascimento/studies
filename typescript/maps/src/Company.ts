@@ -1,6 +1,6 @@
 import { faker } from '@faker-js/faker';
 
-export class Comapany {
+export class Company {
   name: string;
   catchPhrase: string;
   location: {
